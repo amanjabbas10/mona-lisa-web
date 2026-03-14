@@ -1,4 +1,4 @@
-import "./style/style.css";
+import "../src/style/style.css";
 import Homepage from "./component/homepage";
 import { useEffect } from "react";
 import AOS from "aos";
