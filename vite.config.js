@@ -4,8 +4,10 @@ import react from "@vitejs/plugin-react";
 
 // https://vite.dev/config/
 export default defineConfig(({ command }) => ({
-  // Use relative asset paths in production so the build works on GitHub Pages
-  // and in local static previews without needing a specific subpath.
-  base: command === "build" ? "./" : "/",
+  // Use the repo subpath on GitHub Pages; keep dev at `/`.
+  base:
+    command === "build" || process.env.npm_lifecycle_event === "preview"
+      ? "/mona-lisa-web/"
+      : "/",
   plugins: [react()],
 }));
