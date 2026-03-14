@@ -59,12 +59,6 @@ const homepage = () => {
           >
             Sculpture
           </a>
-          <a className=" hover:text-gray-500 transition duration-300" href="#">
-            Home
-          </a>
-          <a className=" hover:text-gray-500 transition duration-300" href="#">
-            Home
-          </a>
         </div>
 
         {/* <button className="mr-3 border rounded-3xl p-[7px] w-40 text-[15px] font-medium text-white hover:border-indigo-950 hover:underline  transition duration-300 ">
