@@ -1,8 +1,10 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ command }) => ({
+  // Use relative asset paths in production so the build works on GitHub Pages
+  // and in local static previews without needing a specific subpath.
+  base: command === "build" ? "./" : "/",
   plugins: [react()],
-  base: "/mona-lisa-web/",
-})
+}));
