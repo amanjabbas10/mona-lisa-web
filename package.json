@@ -1,4 +1,5 @@
 {
+  "homepage": "https://amanjabbas10.github.io/mona-lisa-web/",
   "name": "mona",
   "private": true,
   "version": "0.0.0",
@@ -7,7 +8,9 @@
     "dev": "vite --configLoader native",
     "build": "vite build --configLoader native",
     "lint": "eslint .",
-    "preview": "vite preview --configLoader native"
+    "preview": "vite preview --configLoader native",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^19.2.4",
